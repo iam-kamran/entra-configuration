@@ -25,7 +25,7 @@ $PasswordProfile = @{
 $NewUser = New-MgUser -DisplayName "Test Pipeline User" `
     -UserPrincipalName "testpipeline@yourdomain.com" `
     -MailNickname "testpipeline" `
-    -AccountEnabled $true `
+    -AccountEnabled:$true `
     -PasswordProfile $PasswordProfile
 
 Write-Host "Successfully created user: $($NewUser.UserPrincipalName)" -ForegroundColor Green
