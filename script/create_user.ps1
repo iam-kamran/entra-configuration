@@ -23,7 +23,7 @@ $PasswordProfile = @{
 
 # 5. Create the user
 $NewUser = New-MgUser -DisplayName "Test Pipeline User" `
-    -UserPrincipalName "testpipeline@yourdomain.com" `
+    -UserPrincipalName "testpipeline@ansari.solutions" `
     -MailNickname "testpipeline" `
     -AccountEnabled:$true `
     -PasswordProfile $PasswordProfile
