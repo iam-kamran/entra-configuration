@@ -1,7 +1,7 @@
 Import-Module Microsoft.Graph
 
 # 1. Fetch the token from the active pipeline session specifically for Microsoft Graph
-$GraphToken = (Get-AzAccessToken -ResourceUrl "https://graph.microsoft.com").Token
+$GraphToken = (Get-AzAccessToken -ResourceTypeName MSGraph).Token
 
 # 2. Convert to SecureString
 $SecureToken = ConvertTo-SecureString $GraphToken -AsPlainText -Force
